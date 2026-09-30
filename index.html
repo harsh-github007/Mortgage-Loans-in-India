@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Loan Calculator for India</title>
+  <meta name="description" content="EMI, prepayment savings, repo-rate changes, tax under both regimes and rent vs buy for home loans in India, with September 2026 lender rates.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232a78d6'/><path d='M7 16l9-8 9 8M10 14v10h12V14' stroke='white' stroke-width='2.5' fill='none' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Home Loan Calculator for India</h1>
+      <p class="lede">What a home loan really costs, what prepaying saves, what a repo-rate change does to it, how much tax it saves, and whether buying beats renting.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" aria-labelledby="loanHead">
+      <h2 id="loanHead">Your loan</h2>
+      <div class="inputs">
+        <label>Loan amount (₹)<input id="amount" type="number" inputmode="numeric" min="100000" step="100000" value="5000000"></label>
+        <label>Interest rate (% a year)<input id="rate" type="number" inputmode="decimal" min="1" max="20" step="0.05" value="7.55"></label>
+        <label>Tenure (years)<input id="years" type="number" inputmode="numeric" min="1" max="30" step="1" value="20"></label>
+        <label>Start from a lender's rate
+          <select id="lender"><option value="">Choose a lender…</option></select>
+        </label>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><span>Monthly EMI</span><b id="kEmi">–</b></div>
+        <div class="kpi"><span>Total interest</span><b id="kInt">–</b><small id="kIntPct"></small></div>
+        <div class="kpi"><span>Total repaid</span><b id="kPaid">–</b></div>
+        <div class="kpi"><span>Interest in year 1</span><b id="kY1">–</b><small id="kY1Pct"></small></div>
+      </div>
+      <h3>Where each year's payments go</h3>
+      <div class="chart"><canvas id="yearChart" aria-label="Interest and principal paid each year"></canvas></div>
+      <details>
+        <summary>Year-by-year table</summary>
+        <div class="scroll"><table class="tbl" id="yearTable"></table></div>
+      </details>
+    </section>
+
+    <div class="grid2">
+      <section class="panel" aria-labelledby="preHead">
+        <h2 id="preHead">Prepaying</h2>
+        <div class="inputs">
+          <label>One-time prepayment (₹)<input id="lump" type="number" inputmode="numeric" min="0" step="50000" value="500000"></label>
+          <label>In year<input id="lumpYear" type="number" inputmode="numeric" min="1" max="30" value="3"></label>
+          <label>Extra every month (₹)<input id="extra" type="number" inputmode="numeric" min="0" step="1000" value="0"></label>
+          <label>After prepaying, keep
+            <select id="mode"><option value="tenure">the same EMI (finish sooner)</option><option value="emi">the same end date (lower EMI)</option></select>
+          </label>
+        </div>
+        <p class="result" id="preResult"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="repoHead">
+        <h2 id="repoHead">If the repo rate changes</h2>
+        <p class="muted small">Most floating-rate home loans are linked to the RBI repo rate (now <b>5.25%</b>), so a change passes straight into your rate. Banks usually keep the EMI and change the tenure.</p>
+        <div class="inputs">
+          <label>Change (percentage points)<input id="repoChange" type="number" inputmode="decimal" min="-3" max="5" step="0.25" value="0.5"></label>
+          <label>After (months)<input id="repoAfter" type="number" inputmode="numeric" min="1" max="240" value="12"></label>
+        </div>
+        <p class="result" id="repoResult"></p>
+      </section>
+    </div>
+
+    <section class="panel" aria-labelledby="balHead">
+      <h2 id="balHead">Loan left over time</h2>
+      <p class="muted small">Your loan as entered, with the prepayments above, and with the repo-rate change above.</p>
+      <div class="chart"><canvas id="balChart" aria-label="Outstanding loan balance over time"></canvas></div>
+    </section>
+
+    <div class="grid2">
+      <section class="panel" aria-labelledby="taxHead">
+        <h2 id="taxHead">Tax saved, FY 2026-27</h2>
+        <p class="muted small">For a salaried person under 60 living in the home. Only the old regime allows home-loan deductions: interest up to ₹2 lakh and principal within the ₹1.5 lakh 80C limit.</p>
+        <div class="inputs">
+          <label>Salary a year (₹)<input id="salary" type="number" inputmode="numeric" min="0" step="100000" value="2500000"></label>
+          <label>Other 80C investments (₹)<input id="other80c" type="number" inputmode="numeric" min="0" step="10000" value="0"></label>
+        </div>
+        <table class="tbl" id="taxTable"></table>
+        <p class="result" id="taxResult"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="rvbHead">
+        <h2 id="rvbHead">Rent or buy?</h2>
+        <div class="inputs">
+          <label>Home price (₹)<input id="price" type="number" inputmode="numeric" min="0" step="100000" value="7500000"></label>
+          <label>Down payment (%)<input id="down" type="number" inputmode="numeric" min="10" max="100" value="20"></label>
+          <label>Rent for a similar home (₹/month)<input id="rent" type="number" inputmode="numeric" min="0" step="1000" value="22000"></label>
+          <label>Rent rises (% a year)<input id="rentGrowth" type="number" inputmode="decimal" step="0.5" value="5"></label>
+          <label>Home value rises (% a year)<input id="appr" type="number" inputmode="decimal" step="0.5" value="5"></label>
+          <label>Return on invested savings (% a year)<input id="ret" type="number" inputmode="decimal" step="0.5" value="10"></label>
+          <label>Compare over (years)<input id="horizon" type="number" inputmode="numeric" min="1" max="30" value="15"></label>
+        </div>
+        <p class="result" id="rvbResult"></p>
+        <div class="chart small-chart"><canvas id="rvbChart" aria-label="Wealth from buying versus renting"></canvas></div>
+        <p class="muted small">Buying includes 7% for stamp duty and registration and 0.5% a year for upkeep, and uses the loan rate and tenure above. Renting invests the down payment and, each month, whatever buying would have cost beyond the rent.</p>
+      </section>
+    </div>
+
+    <section class="panel" aria-labelledby="ratesHead">
+      <h2 id="ratesHead">Home-loan rates, September 2026</h2>
+      <p class="muted small">Starting rates for salaried borrowers with good credit scores; most borrowers pay more. Check with the lender before deciding.</p>
+      <div class="scroll"><table class="tbl" id="ratesTable"></table></div>
+      <p class="muted small">Sources: lender rates from <a href="https://www.urbanmoney.com/home-loan/interest-rate">Urban Money</a> (updated 28 September 2026) and <a href="https://www.icici.bank.in/personal-banking/loans/home-loan/interest-rates">ICICI Bank</a>; repo rate from the <a href="https://www.indiainfoline.com/news/economy/rbi-policy-update-august-2026-repo-rate-unchanged-at-5-25-fy27-gdp-growth-raised-to-6-7-inflation-forecast-cut">RBI policy of 5 August 2026</a>.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>For information only, not financial advice.</span>
+    <a href="https://github.com/harsh-github007/Mortgage-Loans-in-India">Source and research on GitHub</a>
+  </footer>
+
+  <script src="assets/vendor/chart.umd.js"></script>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

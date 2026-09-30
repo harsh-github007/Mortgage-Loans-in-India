@@ -1,0 +1,6 @@
+{
+  "name": "mortgage-loans-in-india",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/loan.test.mjs" }
+}

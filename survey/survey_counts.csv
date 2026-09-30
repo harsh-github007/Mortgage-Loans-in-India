@@ -1,0 +1,145 @@
+question,question_text,answer,lender,count
+occupation,Occupation,Salaried,SBI,12
+occupation,Occupation,Salaried,ICICI,21
+occupation,Occupation,Salaried,HDFC,18
+occupation,Occupation,Salaried,NBFCs,12
+occupation,Occupation,Self-employed,SBI,3
+occupation,Occupation,Self-employed,ICICI,1
+occupation,Occupation,Self-employed,HDFC,1
+occupation,Occupation,Self-employed,NBFCs,3
+occupation,Occupation,Business,SBI,11
+occupation,Occupation,Business,ICICI,6
+occupation,Occupation,Business,HDFC,6
+occupation,Occupation,Business,NBFCs,15
+occupation,Occupation,Homemaker,SBI,4
+occupation,Occupation,Homemaker,ICICI,2
+occupation,Occupation,Homemaker,HDFC,5
+occupation,Occupation,Homemaker,NBFCs,0
+age,Age,Under 30,SBI,10
+age,Age,Under 30,ICICI,8
+age,Age,Under 30,HDFC,8
+age,Age,Under 30,NBFCs,12
+age,Age,31-40,SBI,16
+age,Age,31-40,ICICI,17
+age,Age,31-40,HDFC,16
+age,Age,31-40,NBFCs,16
+age,Age,41-50,SBI,3
+age,Age,41-50,ICICI,2
+age,Age,41-50,HDFC,2
+age,Age,41-50,NBFCs,1
+age,Age,Over 50,SBI,1
+age,Age,Over 50,ICICI,3
+age,Age,Over 50,HDFC,4
+age,Age,Over 50,NBFCs,1
+gender,Gender,Male,SBI,26
+gender,Gender,Male,ICICI,23
+gender,Gender,Male,HDFC,21
+gender,Gender,Male,NBFCs,17
+gender,Gender,Female,SBI,4
+gender,Gender,Female,ICICI,7
+gender,Gender,Female,HDFC,9
+gender,Gender,Female,NBFCs,13
+loan_age,How long ago the loan was taken,Under 1 year,SBI,6
+loan_age,How long ago the loan was taken,Under 1 year,ICICI,12
+loan_age,How long ago the loan was taken,Under 1 year,HDFC,19
+loan_age,How long ago the loan was taken,Under 1 year,NBFCs,15
+loan_age,How long ago the loan was taken,1-10 years,SBI,23
+loan_age,How long ago the loan was taken,1-10 years,ICICI,16
+loan_age,How long ago the loan was taken,1-10 years,HDFC,7
+loan_age,How long ago the loan was taken,1-10 years,NBFCs,10
+loan_age,How long ago the loan was taken,Over 10 years,SBI,1
+loan_age,How long ago the loan was taken,Over 10 years,ICICI,2
+loan_age,How long ago the loan was taken,Over 10 years,HDFC,4
+loan_age,How long ago the loan was taken,Over 10 years,NBFCs,5
+satisfaction,Satisfaction with the lender,Highly satisfied,SBI,6
+satisfaction,Satisfaction with the lender,Highly satisfied,ICICI,11
+satisfaction,Satisfaction with the lender,Highly satisfied,HDFC,16
+satisfaction,Satisfaction with the lender,Highly satisfied,NBFCs,11
+satisfaction,Satisfaction with the lender,Satisfied,SBI,23
+satisfaction,Satisfaction with the lender,Satisfied,ICICI,13
+satisfaction,Satisfaction with the lender,Satisfied,HDFC,12
+satisfaction,Satisfaction with the lender,Satisfied,NBFCs,13
+satisfaction,Satisfaction with the lender,Neutral,SBI,1
+satisfaction,Satisfaction with the lender,Neutral,ICICI,2
+satisfaction,Satisfaction with the lender,Neutral,HDFC,2
+satisfaction,Satisfaction with the lender,Neutral,NBFCs,4
+satisfaction,Satisfaction with the lender,Dissatisfied,SBI,0
+satisfaction,Satisfaction with the lender,Dissatisfied,ICICI,4
+satisfaction,Satisfaction with the lender,Dissatisfied,HDFC,0
+satisfaction,Satisfaction with the lender,Dissatisfied,NBFCs,2
+satisfaction,Satisfaction with the lender,Highly dissatisfied,SBI,0
+satisfaction,Satisfaction with the lender,Highly dissatisfied,ICICI,0
+satisfaction,Satisfaction with the lender,Highly dissatisfied,HDFC,0
+satisfaction,Satisfaction with the lender,Highly dissatisfied,NBFCs,0
+choice_factor,Main factor in choosing the lender,Interest rate,SBI,21
+choice_factor,Main factor in choosing the lender,Interest rate,ICICI,20
+choice_factor,Main factor in choosing the lender,Interest rate,HDFC,19
+choice_factor,Main factor in choosing the lender,Interest rate,NBFCs,23
+choice_factor,Main factor in choosing the lender,Schemes,SBI,6
+choice_factor,Main factor in choosing the lender,Schemes,ICICI,6
+choice_factor,Main factor in choosing the lender,Schemes,HDFC,4
+choice_factor,Main factor in choosing the lender,Schemes,NBFCs,3
+choice_factor,Main factor in choosing the lender,Service,SBI,3
+choice_factor,Main factor in choosing the lender,Service,ICICI,2
+choice_factor,Main factor in choosing the lender,Service,HDFC,3
+choice_factor,Main factor in choosing the lender,Service,NBFCs,4
+choice_factor,Main factor in choosing the lender,Other,SBI,0
+choice_factor,Main factor in choosing the lender,Other,ICICI,2
+choice_factor,Main factor in choosing the lender,Other,HDFC,4
+choice_factor,Main factor in choosing the lender,Other,NBFCs,0
+info_source,Where they learned about the loan,Internet,SBI,8
+info_source,Where they learned about the loan,Internet,ICICI,17
+info_source,Where they learned about the loan,Internet,HDFC,15
+info_source,Where they learned about the loan,Internet,NBFCs,23
+info_source,Where they learned about the loan,Television,SBI,12
+info_source,Where they learned about the loan,Television,ICICI,8
+info_source,Where they learned about the loan,Television,HDFC,6
+info_source,Where they learned about the loan,Television,NBFCs,2
+info_source,Where they learned about the loan,Newspaper,SBI,6
+info_source,Where they learned about the loan,Newspaper,ICICI,2
+info_source,Where they learned about the loan,Newspaper,HDFC,4
+info_source,Where they learned about the loan,Newspaper,NBFCs,3
+info_source,Where they learned about the loan,Other,SBI,4
+info_source,Where they learned about the loan,Other,ICICI,3
+info_source,Where they learned about the loan,Other,HDFC,5
+info_source,Where they learned about the loan,Other,NBFCs,2
+rate_fair,Rate charged is in line with the market,Agree,SBI,26
+rate_fair,Rate charged is in line with the market,Agree,ICICI,23
+rate_fair,Rate charged is in line with the market,Agree,HDFC,28
+rate_fair,Rate charged is in line with the market,Agree,NBFCs,21
+rate_fair,Rate charged is in line with the market,Disagree,SBI,4
+rate_fair,Rate charged is in line with the market,Disagree,ICICI,7
+rate_fair,Rate charged is in line with the market,Disagree,HDFC,2
+rate_fair,Rate charged is in line with the market,Disagree,NBFCs,9
+aware_terms,Aware of all terms and conditions,Yes,SBI,20
+aware_terms,Aware of all terms and conditions,Yes,ICICI,21
+aware_terms,Aware of all terms and conditions,Yes,HDFC,23
+aware_terms,Aware of all terms and conditions,Yes,NBFCs,22
+aware_terms,Aware of all terms and conditions,No,SBI,10
+aware_terms,Aware of all terms and conditions,No,ICICI,9
+aware_terms,Aware of all terms and conditions,No,HDFC,7
+aware_terms,Aware of all terms and conditions,No,NBFCs,8
+time_consuming,Getting the loan was time-consuming,Strongly agree,SBI,14
+time_consuming,Getting the loan was time-consuming,Strongly agree,ICICI,16
+time_consuming,Getting the loan was time-consuming,Strongly agree,HDFC,23
+time_consuming,Getting the loan was time-consuming,Strongly agree,NBFCs,21
+time_consuming,Getting the loan was time-consuming,Agree,SBI,5
+time_consuming,Getting the loan was time-consuming,Agree,ICICI,14
+time_consuming,Getting the loan was time-consuming,Agree,HDFC,7
+time_consuming,Getting the loan was time-consuming,Agree,NBFCs,5
+time_consuming,Getting the loan was time-consuming,Disagree,SBI,6
+time_consuming,Getting the loan was time-consuming,Disagree,ICICI,0
+time_consuming,Getting the loan was time-consuming,Disagree,HDFC,0
+time_consuming,Getting the loan was time-consuming,Disagree,NBFCs,4
+time_consuming,Getting the loan was time-consuming,Strongly disagree,SBI,5
+time_consuming,Getting the loan was time-consuming,Strongly disagree,ICICI,0
+time_consuming,Getting the loan was time-consuming,Strongly disagree,HDFC,0
+time_consuming,Getting the loan was time-consuming,Strongly disagree,NBFCs,0
+paperwork,Getting the loan needed a lot of paperwork,Yes,SBI,21
+paperwork,Getting the loan needed a lot of paperwork,Yes,ICICI,12
+paperwork,Getting the loan needed a lot of paperwork,Yes,HDFC,15
+paperwork,Getting the loan needed a lot of paperwork,Yes,NBFCs,24
+paperwork,Getting the loan needed a lot of paperwork,No,SBI,9
+paperwork,Getting the loan needed a lot of paperwork,No,ICICI,18
+paperwork,Getting the loan needed a lot of paperwork,No,HDFC,15
+paperwork,Getting the loan needed a lot of paperwork,No,NBFCs,6
