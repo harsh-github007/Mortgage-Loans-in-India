@@ -3,7 +3,7 @@
 A study of home loans in India, with a calculator that works through what a loan really costs.
 
 **Calculator:** https://harsh-github007.github.io/Mortgage-Loans-in-India/
-**Research paper:** [A Study on Home Loans with Special Reference to Mortgage Loans in India](research/home-loans-in-india.md) ([PDF](research/home-loans-in-india.pdf))
+**Research paper:** [A Study on Home Loans with Special Reference to Mortgage Loans in India: Before, During and After COVID-19](research/home-loans-in-india.md) ([PDF](research/home-loans-in-india.pdf))
 
 ## Key findings
 
