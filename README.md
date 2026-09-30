@@ -3,7 +3,7 @@
 A study of home loans in India, with a calculator that works through what a loan really costs.
 
 **Calculator:** https://harsh-github007.github.io/Mortgage-Loans-in-India/
-**Research paper:** [A Study on Home Loans with Special Reference to Mortgage Loans in India: Before, During and After COVID-19](research/home-loans-in-india.md) ([PDF](research/home-loans-in-india.pdf))
+**Research paper:** [A Study on Home Loans with Special Reference to Mortgage Loans in India: Before, During and After COVID-19](research/home-loans-in-india.pdf), written in the Springer Nature journal article format ([LaTeX source](research/home-loans-in-india.tex))
 
 ## Key findings
 
@@ -38,6 +38,7 @@ The arithmetic is in [`assets/loan.js`](assets/loan.js), kept separate from the 
 python -m http.server 8000        # then open http://localhost:8000
 npm test                          # 13 tests of the loan and tax arithmetic (Node 18+)
 python survey/analyze.py          # re-run the survey analysis (pandas, numpy, matplotlib)
+cd research && latexmk -pdf home-loans-in-india.tex   # rebuild the paper (TeX Live)
 ```
 
 The site is static HTML, CSS and JavaScript with no build step, and [Chart.js](https://www.chartjs.org/) is included in `assets/vendor/`. [`.github/workflows/pages.yml`](.github/workflows/pages.yml) publishes it to GitHub Pages on every push.
@@ -48,7 +49,7 @@ The site is static HTML, CSS and JavaScript with no build step, and [Chart.js](h
 index.html, assets/          the calculator
 assets/loan.js               EMI, schedules, prepayment, rate changes, tax, rent vs buy
 tests/loan.test.mjs          tests for loan.js
-research/                    the research paper (Markdown and PDF)
+research/                    the research paper (Springer Nature LaTeX source and PDF) and its chart
 survey/                      survey counts, analysis script, results and chart
 ```
 
