@@ -5,6 +5,11 @@ A study of home loans in India, with a calculator that works through what a loan
 **Calculator:** https://harsh-github007.github.io/Mortgage-Loans-in-India/
 **Research paper:** [A Study on Home Loans with Special Reference to Mortgage Loans in India: Before, During and After COVID-19](research/home-loans-in-india.pdf), written in the Springer Nature journal article format ([LaTeX source](research/home-loans-in-india.tex))
 
+
+![Home loan planning workspace](assets/screenshot.png)
+
+The responsive interface highlights monthly EMI, groups loan inputs clearly, and provides direct navigation to prepayment and rent-versus-buy scenarios. Warm ivory surfaces and blue chart accents distinguish principal from interest. Navigation respects reduced-motion preferences.
+
 ## Key findings
 
 - **Interest nearly doubles the cost.** On a ₹50 lakh, 20-year loan at 7.55%, interest adds up to ₹47 lakh, 94% of the amount borrowed. In year 1, 77% of the payments go to interest.
